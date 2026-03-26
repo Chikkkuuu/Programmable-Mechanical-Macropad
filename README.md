@@ -54,5 +54,4 @@ Mechanical_Macropad/
 ## Professional Profile
 * **Developer:** Ritul Raj Bhakat (Firmware Developer)
 * **Innovation:** Engineered custom bare-metal firmware for an ESP32-S3 to manage macro execution without third-party frameworks.
-* **Contact:** [ritulraj384@gmail.com](mailto:ritulraj384@gmail.com)
-* **Links:** [LinkedIn](https://www.linkedin.com/in/ritul-raj-bhakat-521202277/) | [GitHub Portfolio](https://github.com/Chikkkuuu)
+* **Contact:** [ritulraj384@gmail.com](mailto:ritulraj384@gmail.com) | [LinkedIn](https://www.linkedin.com/in/ritul-raj-bhakat-521202277/) | [Github](https://github.com/Chikkkuuu) | [Portfolio](https://ritulrajbhakatportfolio.vercel.app/)
