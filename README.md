@@ -2,10 +2,13 @@
 ### ESP32-S3 Bare-Metal Firmware | Custom HID Engine
 **Focus:** Low-latency switch matrix scanning, non-volatile macro storage, and hardware-level debouncing.
 
+![SmartDeck Physical Build](https://github.com/Chikkkuuu/Asset/blob/main/Industrial%20Design.png)
 ---
 
 ## Engineering Philosophy
 Standard keyboard frameworks often carry significant overhead that can introduce input jitter. The **SmartDeck** firmware was engineered from the ground up to prioritize **input determinism**. By bypassing heavy abstractions and utilizing direct register access, I achieved a high-frequency polling rate that ensures macro execution begins within microseconds of physical switch actuation.
+
+![System Architecture - ESP32-S3 Logic Flow](link-to-architecture.png)
 
 ---
 
@@ -35,6 +38,23 @@ Standard keyboard frameworks often carry significant overhead that can introduce
 To ensure input latency remains unaffected by visual updates:
 *   **Core 0:** Dedicated to high-speed Matrix Scanning and HID reporting.
 *   **Core 1:** Manages the I2C OLED Display and NVS Flash writes.
+
+---
+## 📐 Physical Specifications & Hardware Architecture
+The **SmartDeck v4** is architected for a compact yet highly functional desktop footprint, integrating mechanical precision with high-speed MCU execution.
+
+### **Mechanical Dimensions**
+*   **Enclosure Footprint:** 160mm x 110mm chassis constructed from **Type III Hard Coat Anodized Aluminum Alloy**.
+*   **Key Cluster:** 3x3 matrix with 20.00mm key spacing and 4.00mm inter-key gaps.
+*   **Control Interface:** Dual rotary encoders including a 30mm Scroll wheel and a 15mm Mode selector with **360° absolute encoder feedback**.
+
+![Mechanical Dimensions and Layout](https://github.com/Chikkkuuu/Asset/blob/main/Engineering%20Sketch.png)
+
+### **Hardware Integration**
+*   **MCU:** ESP32-S3 (QFN-56 package) optimized for rear-mount USB-C bare-metal execution.
+*   **Visual Feedback:** 0.91'' 128x32 Blue I2C OLED module for real-time profile and mode status.
+*   **Switch Tech:** Cherry MX compatible hot-swap sockets with integrated 3-pin ARGB LEDs.
+*   **Connectivity:** Rear-mount USB-C supporting DisplayPort (DP) and UART for low-level debugging.
 
 ---
 
